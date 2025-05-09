@@ -1,0 +1,151 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #3a3a3a;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.points-display {
+  font-size: 2em;
+  font-weight: bold;
+  color: #f0f0f0;
+  margin-bottom: 1rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+.button:hover {
+  border-color: #646cff;
+}
+
+.button:focus,
+.button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: transparent;
+}
+
+.decrement-button {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+.decrement-button:hover:not(:disabled) {
+  background-color: #e05252;
+}
+
+.increment-button {
+  background-color: #51cf66;
+  color: #fff;
+}
+.increment-button:hover:not(:disabled) {
+  background-color: #3eaf50;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  .counter-container {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .points-display {
+    color: #213547;
+  }
+  .button {
+     background-color: #f0f0f0;
+     color: #213547;
+  }
+  .button:hover:not(:disabled) {
+    background-color: #e0e0e0;
+    border-color: #747bff;
+  }
+  .decrement-button {
+    background-color: #ff8787;
+    color: #fff;
+  }
+  .decrement-button:hover:not(:disabled) {
+    background-color: #ff6b6b;
+  }
+  .increment-button {
+    background-color: #69db7c;
+    color: #fff;
+  }
+  .increment-button:hover:not(:disabled) {
+    background-color: #51cf66;
+  }
+  .error-message {
+    color: #e03131;
+  }
+} 
