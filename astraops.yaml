@@ -1,0 +1,19 @@
+applicationName: points-fullstack # K8s application name
+
+services:
+  - name: frontend-app # K8s service name
+    build:
+      context: ./frontend # Frontend directory
+      dockerfile: Dockerfile # Dockerfile name
+
+  - name: backend-api
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      MONGO_URI: mongodb://mongo-db-service:27017/points_db 
+
+  - name: mongo-db
+    image: mongo:latest 
+
+    

@@ -12,7 +12,7 @@ services:
       - app-network
 
   backend:
-    image: jorgeflorentino8/act1-backend:latest
+    image: XXX/act1-backend:latest
     container_name: backend_api
     ports:
       - "5000:5000"
@@ -26,7 +26,7 @@ services:
     restart: unless-stopped
 
   frontend:
-    image: jorgeflorentino8/act1-frontend:latest
+    image: XXX/act1-frontend:latest
     container_name: frontend_app
     ports:
       - "80:80"

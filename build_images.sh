@@ -2,7 +2,7 @@
 
 set -e
 
-DOCKER_USERNAME="jorgeflorentino8"
+DOCKER_USERNAME="XXX"
 
 FRONTEND_IMAGE_NAME="act1-frontend"
 BACKEND_IMAGE_NAME="act1-backend"
