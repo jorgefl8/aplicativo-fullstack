@@ -1,0 +1,15 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install AstraOps CLI
+        run: npm install -g @astraops/astraops-cli
+      - name: Ensure AstraOps CLI is in PATH
+        run: astraops-cli 
