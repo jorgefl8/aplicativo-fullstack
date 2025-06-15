@@ -1,0 +1,15 @@
+# NOTA: Este PVC NO es necesario cuando se usa StatefulSet con volumeClaimTemplates
+# El StatefulSet crea automáticamente PVCs individuales para cada pod
+# Este archivo se mantiene solo como referencia o para uso con Deployment simple
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongodb-pvc # Solo usar si se usa deployment-mongodb.yaml en lugar de statefulset
+spec:
+  accessModes:
+    - ReadWriteOnce # Permite que el volumen sea montado por un único nodo en modo lectura/escritura.
+  resources:
+    requests:
+      storage: 5Gi # Solicita 5 Gigabytes de almacenamiento, suficiente para aplicación simple.
+  storageClassName: gp2 # Para EKS con AWS EBS. Usar 'gp3' si está disponible para mejor rendimiento.
