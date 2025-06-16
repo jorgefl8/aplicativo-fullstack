@@ -18,5 +18,4 @@ spec:
     ports:
     - protocol: TCP
       port: 27017
-  egress:
-  - {} # Permitir todo el tráfico saliente para MongoDB (necesario para replicación, etc.) 
+  egress: [] # Permitir todo el tráfico saliente para MongoDB (necesario para replicación, DNS, etc.) 

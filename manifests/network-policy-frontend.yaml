@@ -34,15 +34,12 @@ spec:
     ports:
     - protocol: TCP
       port: 8080 # Puerto alternativo de Express
-  - to: {} # Permitir conexiones DNS y otras necesarias
-    ports:
+  - ports: # Permitir DNS (sin 'to' permite a cualquier destino)
     - protocol: UDP
       port: 53
-  - to: {} # Permitir conexiones HTTPS para CDNs, APIs externas, etc.
-    ports:
+  - ports: # Permitir HTTPS para CDNs, APIs externas, etc.
     - protocol: TCP
       port: 443
-  - to: {} # Permitir conexiones HTTP para APIs externas
-    ports:
+  - ports: # Permitir HTTP para APIs externas
     - protocol: TCP
       port: 80 
